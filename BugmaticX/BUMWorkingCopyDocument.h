@@ -1,5 +1,5 @@
 //
-//  Document.h
+//  BUMWorkingCopyDocument.h
 //  BugmaticX
 //
 //  Created by Uli Kusterer on 25.05.17.
@@ -8,8 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Document : NSDocument
 
+@interface BUMWorkingCopyDocument : NSDocument
 
 @end
 

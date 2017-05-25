@@ -7,26 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55EEB2051ED6EE06003069DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB2041ED6EE06003069DA /* AppDelegate.m */; };
+		55EEB2051ED6EE06003069DA /* BUMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB2041ED6EE06003069DA /* BUMAppDelegate.m */; };
 		55EEB2081ED6EE06003069DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB2071ED6EE06003069DA /* main.m */; };
-		55EEB20B1ED6EE06003069DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB20A1ED6EE06003069DA /* ViewController.m */; };
-		55EEB20E1ED6EE06003069DA /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB20D1ED6EE06003069DA /* Document.m */; };
+		55EEB20B1ED6EE06003069DA /* BUMIssueListViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB20A1ED6EE06003069DA /* BUMIssueListViewController.mm */; };
+		55EEB20E1ED6EE06003069DA /* BUMWorkingCopyDocument.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB20D1ED6EE06003069DA /* BUMWorkingCopyDocument.mm */; };
 		55EEB2101ED6EE06003069DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55EEB20F1ED6EE06003069DA /* Assets.xcassets */; };
 		55EEB2131ED6EE06003069DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EEB2111ED6EE06003069DA /* Main.storyboard */; };
+		55EEB2391ED6FAAB003069DA /* bugmatic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB22E1ED6FAAB003069DA /* bugmatic.cpp */; };
+		55EEB23A1ED6FAAB003069DA /* configfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB2301ED6FAAB003069DA /* configfile.cpp */; };
+		55EEB23B1ED6FAAB003069DA /* fake_filesystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB2321ED6FAAB003069DA /* fake_filesystem.cpp */; };
+		55EEB23D1ED6FAAB003069DA /* md5hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB2351ED6FAAB003069DA /* md5hash.cpp */; };
+		55EEB23E1ED6FAAB003069DA /* url_request.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB2371ED6FAAB003069DA /* url_request.cpp */; };
+		55EEB2421ED6FAC3003069DA /* json11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB2401ED6FAC3003069DA /* json11.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		55EEB2001ED6EE06003069DA /* BugmaticX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugmaticX.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		55EEB2031ED6EE06003069DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		55EEB2041ED6EE06003069DA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55EEB2031ED6EE06003069DA /* BUMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BUMAppDelegate.h; sourceTree = "<group>"; };
+		55EEB2041ED6EE06003069DA /* BUMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BUMAppDelegate.m; sourceTree = "<group>"; };
 		55EEB2071ED6EE06003069DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		55EEB2091ED6EE06003069DA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		55EEB20A1ED6EE06003069DA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		55EEB20C1ED6EE06003069DA /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
-		55EEB20D1ED6EE06003069DA /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		55EEB2091ED6EE06003069DA /* BUMIssueListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BUMIssueListViewController.h; sourceTree = "<group>"; };
+		55EEB20A1ED6EE06003069DA /* BUMIssueListViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BUMIssueListViewController.mm; sourceTree = "<group>"; };
+		55EEB20C1ED6EE06003069DA /* BUMWorkingCopyDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BUMWorkingCopyDocument.h; sourceTree = "<group>"; };
+		55EEB20D1ED6EE06003069DA /* BUMWorkingCopyDocument.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BUMWorkingCopyDocument.mm; sourceTree = "<group>"; };
 		55EEB20F1ED6EE06003069DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55EEB2121ED6EE06003069DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55EEB2141ED6EE06003069DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55EEB22E1ED6FAAB003069DA /* bugmatic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bugmatic.cpp; path = bugmatic/bugmatic/bugmatic.cpp; sourceTree = SOURCE_ROOT; };
+		55EEB22F1ED6FAAB003069DA /* bugmatic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = bugmatic.hpp; path = bugmatic/bugmatic/bugmatic.hpp; sourceTree = SOURCE_ROOT; };
+		55EEB2301ED6FAAB003069DA /* configfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = configfile.cpp; path = bugmatic/bugmatic/configfile.cpp; sourceTree = SOURCE_ROOT; };
+		55EEB2311ED6FAAB003069DA /* configfile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = configfile.hpp; path = bugmatic/bugmatic/configfile.hpp; sourceTree = SOURCE_ROOT; };
+		55EEB2321ED6FAAB003069DA /* fake_filesystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fake_filesystem.cpp; path = bugmatic/bugmatic/fake_filesystem.cpp; sourceTree = SOURCE_ROOT; };
+		55EEB2331ED6FAAB003069DA /* fake_filesystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = fake_filesystem.hpp; path = bugmatic/bugmatic/fake_filesystem.hpp; sourceTree = SOURCE_ROOT; };
+		55EEB2351ED6FAAB003069DA /* md5hash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = md5hash.cpp; path = bugmatic/bugmatic/md5hash.cpp; sourceTree = SOURCE_ROOT; };
+		55EEB2361ED6FAAB003069DA /* md5hash.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = md5hash.hpp; path = bugmatic/bugmatic/md5hash.hpp; sourceTree = SOURCE_ROOT; };
+		55EEB2371ED6FAAB003069DA /* url_request.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = url_request.cpp; path = bugmatic/bugmatic/url_request.cpp; sourceTree = SOURCE_ROOT; };
+		55EEB2381ED6FAAB003069DA /* url_request.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = url_request.hpp; path = bugmatic/bugmatic/url_request.hpp; sourceTree = SOURCE_ROOT; };
+		55EEB2401ED6FAC3003069DA /* json11.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = json11.cpp; path = ../../bugmatic/json11/json11.cpp; sourceTree = "<group>"; };
+		55EEB2411ED6FAC3003069DA /* json11.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = json11.hpp; path = ../../bugmatic/json11/json11.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +77,13 @@
 		55EEB2021ED6EE06003069DA /* BugmaticX */ = {
 			isa = PBXGroup;
 			children = (
-				55EEB2031ED6EE06003069DA /* AppDelegate.h */,
-				55EEB2041ED6EE06003069DA /* AppDelegate.m */,
-				55EEB2091ED6EE06003069DA /* ViewController.h */,
-				55EEB20A1ED6EE06003069DA /* ViewController.m */,
-				55EEB20C1ED6EE06003069DA /* Document.h */,
-				55EEB20D1ED6EE06003069DA /* Document.m */,
+				55EEB2031ED6EE06003069DA /* BUMAppDelegate.h */,
+				55EEB2041ED6EE06003069DA /* BUMAppDelegate.m */,
+				55EEB2091ED6EE06003069DA /* BUMIssueListViewController.h */,
+				55EEB20A1ED6EE06003069DA /* BUMIssueListViewController.mm */,
+				55EEB20C1ED6EE06003069DA /* BUMWorkingCopyDocument.h */,
+				55EEB20D1ED6EE06003069DA /* BUMWorkingCopyDocument.mm */,
+				55EEB23F1ED6FAB3003069DA /* bugmatic */,
 				55EEB20F1ED6EE06003069DA /* Assets.xcassets */,
 				55EEB2111ED6EE06003069DA /* Main.storyboard */,
 				55EEB2141ED6EE06003069DA /* Info.plist */,
@@ -79,6 +98,25 @@
 				55EEB2071ED6EE06003069DA /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55EEB23F1ED6FAB3003069DA /* bugmatic */ = {
+			isa = PBXGroup;
+			children = (
+				55EEB22E1ED6FAAB003069DA /* bugmatic.cpp */,
+				55EEB22F1ED6FAAB003069DA /* bugmatic.hpp */,
+				55EEB2301ED6FAAB003069DA /* configfile.cpp */,
+				55EEB2311ED6FAAB003069DA /* configfile.hpp */,
+				55EEB2321ED6FAAB003069DA /* fake_filesystem.cpp */,
+				55EEB2331ED6FAAB003069DA /* fake_filesystem.hpp */,
+				55EEB2351ED6FAAB003069DA /* md5hash.cpp */,
+				55EEB2361ED6FAAB003069DA /* md5hash.hpp */,
+				55EEB2371ED6FAAB003069DA /* url_request.cpp */,
+				55EEB2381ED6FAAB003069DA /* url_request.hpp */,
+				55EEB2401ED6FAC3003069DA /* json11.cpp */,
+				55EEB2411ED6FAC3003069DA /* json11.hpp */,
+			);
+			name = bugmatic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +145,7 @@
 		55EEB1F81ED6EE06003069DA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BUM;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Uli Kusterer";
 				TargetAttributes = {
@@ -152,10 +191,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55EEB20E1ED6EE06003069DA /* Document.m in Sources */,
-				55EEB20B1ED6EE06003069DA /* ViewController.m in Sources */,
+				55EEB20E1ED6EE06003069DA /* BUMWorkingCopyDocument.mm in Sources */,
+				55EEB20B1ED6EE06003069DA /* BUMIssueListViewController.mm in Sources */,
+				55EEB2421ED6FAC3003069DA /* json11.cpp in Sources */,
 				55EEB2081ED6EE06003069DA /* main.m in Sources */,
-				55EEB2051ED6EE06003069DA /* AppDelegate.m in Sources */,
+				55EEB2051ED6EE06003069DA /* BUMAppDelegate.m in Sources */,
+				55EEB23B1ED6FAAB003069DA /* fake_filesystem.cpp in Sources */,
+				55EEB23E1ED6FAAB003069DA /* url_request.cpp in Sources */,
+				55EEB2391ED6FAAB003069DA /* bugmatic.cpp in Sources */,
+				55EEB23D1ED6FAAB003069DA /* md5hash.cpp in Sources */,
+				55EEB23A1ED6FAAB003069DA /* configfile.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +315,7 @@
 				DEVELOPMENT_TEAM = RCKXACKVZS;
 				INFOPLIST_FILE = BugmaticX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_LDFLAGS = "-lcurl";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.BugmaticX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -283,6 +329,7 @@
 				DEVELOPMENT_TEAM = RCKXACKVZS;
 				INFOPLIST_FILE = BugmaticX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_LDFLAGS = "-lcurl";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.BugmaticX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

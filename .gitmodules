@@ -1,0 +1,3 @@
+[submodule "bugmatic"]
+	path = bugmatic
+	url = https://uliwitness@github.com/uliwitness/bugmatic.git

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BUMAppDelegate.h
 //  BugmaticX
 //
 //  Created by Uli Kusterer on 25.05.17.
@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController
+@interface BUMAppDelegate : NSObject <NSApplicationDelegate>
 
 
 @end

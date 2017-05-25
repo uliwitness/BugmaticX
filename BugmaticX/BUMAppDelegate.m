@@ -1,18 +1,18 @@
 //
-//  AppDelegate.m
+//  BUMAppDelegate.m
 //  BugmaticX
 //
 //  Created by Uli Kusterer on 25.05.17.
 //  Copyright © 2017 Uli Kusterer. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "BUMAppDelegate.h"
 
-@interface AppDelegate ()
+@interface BUMAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation BUMAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	// Insert code here to initialize your application
