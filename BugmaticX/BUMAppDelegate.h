@@ -10,6 +10,5 @@
 
 @interface BUMAppDelegate : NSObject <NSApplicationDelegate>
 
-
 @end
 

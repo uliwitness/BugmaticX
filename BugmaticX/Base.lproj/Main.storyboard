@@ -4,6 +4,7 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -815,70 +816,95 @@
             <objects>
                 <viewController title="IssueDoubleClickSegue" id="Ues-gG-aBb" customClass="BUMIssueDetailsViewController" sceneMemberID="viewController">
                     <view key="view" id="M6Z-tv-scn">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="342"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljS-CG-Sjd">
-                                <rect key="frame" x="18" y="261" width="35" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Title:" id="CEU-qy-8To">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEk-Ux-ibU">
-                                <rect key="frame" x="59" y="258" width="371" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Sv9-pO-FFH">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                                <connections>
-                                    <binding destination="Ues-gG-aBb" name="value" keyPath="issueTitle" id="1p5-ew-sVI"/>
-                                </connections>
-                            </textField>
-                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tK5-z2-3Ui">
-                                <rect key="frame" x="20" y="20" width="410" height="230"/>
-                                <clipView key="contentView" id="8zH-cd-gq7">
-                                    <rect key="frame" x="1" y="1" width="408" height="228"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <textView importsGraphics="NO" richText="NO" findStyle="bar" incrementalSearchingEnabled="YES" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="WqZ-d2-uEZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="408" height="228"/>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCf-ox-aTh">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="342"/>
+                                <subviews>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="xsV-se-es1">
+                                        <rect key="frame" x="20" y="300" width="410" height="22"/>
+                                        <subviews>
+                                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEk-Ux-ibU">
+                                                <rect key="frame" x="39" y="0.0" width="371" height="22"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="Sv9-pO-FFH">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                                <connections>
+                                                    <binding destination="Ues-gG-aBb" name="value" keyPath="issueTitle" id="1p5-ew-sVI"/>
+                                                </connections>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljS-CG-Sjd">
+                                                <rect key="frame" x="-2" y="3" width="35" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Title:" id="CEU-qy-8To">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="GEk-Ux-ibU" firstAttribute="leading" secondItem="ljS-CG-Sjd" secondAttribute="trailing" constant="8" id="2to-Km-zEr"/>
+                                            <constraint firstAttribute="bottom" secondItem="GEk-Ux-ibU" secondAttribute="bottom" id="8Vc-Ox-tbo"/>
+                                            <constraint firstItem="ljS-CG-Sjd" firstAttribute="leading" secondItem="xsV-se-es1" secondAttribute="leading" id="9fA-8W-tjC"/>
+                                            <constraint firstAttribute="trailing" secondItem="GEk-Ux-ibU" secondAttribute="trailing" id="ma8-aL-bTK"/>
+                                            <constraint firstItem="GEk-Ux-ibU" firstAttribute="top" secondItem="xsV-se-es1" secondAttribute="top" id="pTn-H5-H6C"/>
+                                            <constraint firstItem="GEk-Ux-ibU" firstAttribute="baseline" secondItem="ljS-CG-Sjd" secondAttribute="baseline" id="sWb-fy-OIK"/>
+                                        </constraints>
+                                    </customView>
+                                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tK5-z2-3Ui">
+                                        <rect key="frame" x="20" y="20" width="410" height="272"/>
+                                        <clipView key="contentView" id="8zH-cd-gq7">
+                                            <rect key="frame" x="1" y="1" width="408" height="270"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textView importsGraphics="NO" richText="NO" findStyle="bar" incrementalSearchingEnabled="YES" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="WqZ-d2-uEZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="408" height="270"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="minSize" width="408" height="270"/>
+                                                    <size key="maxSize" width="463" height="10000000"/>
+                                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <binding destination="Ues-gG-aBb" name="value" keyPath="issueBody" id="WAb-bL-Ckm"/>
+                                                    </connections>
+                                                </textView>
+                                            </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="408" height="228"/>
-                                            <size key="maxSize" width="463" height="10000000"/>
-                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <connections>
-                                                <binding destination="Ues-gG-aBb" name="value" keyPath="issueBody" id="WAb-bL-Ckm"/>
-                                            </connections>
-                                        </textView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="YND-UQ-Avq">
-                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ohU-67-eaC">
-                                    <rect key="frame" x="393" y="1" width="16" height="228"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                            </scrollView>
+                                        </clipView>
+                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="YND-UQ-Avq">
+                                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ohU-67-eaC">
+                                            <rect key="frame" x="393" y="1" width="16" height="270"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                    </scrollView>
+                                </subviews>
+                                <edgeInsets key="edgeInsets" left="20" right="20" top="20" bottom="20"/>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="GEk-Ux-ibU" firstAttribute="top" secondItem="M6Z-tv-scn" secondAttribute="top" constant="20" id="2JD-FU-BJZ"/>
-                            <constraint firstItem="tK5-z2-3Ui" firstAttribute="leading" secondItem="M6Z-tv-scn" secondAttribute="leading" constant="20" id="8zj-JN-Mbj"/>
-                            <constraint firstItem="GEk-Ux-ibU" firstAttribute="leading" secondItem="ljS-CG-Sjd" secondAttribute="trailing" constant="8" id="AwH-Wc-CEa"/>
-                            <constraint firstAttribute="bottom" secondItem="tK5-z2-3Ui" secondAttribute="bottom" constant="20" id="PQF-2G-JUJ"/>
-                            <constraint firstAttribute="trailing" secondItem="tK5-z2-3Ui" secondAttribute="trailing" constant="20" id="fhX-nf-7oV"/>
-                            <constraint firstAttribute="trailing" secondItem="GEk-Ux-ibU" secondAttribute="trailing" constant="20" id="mBU-Xt-cUT"/>
-                            <constraint firstItem="tK5-z2-3Ui" firstAttribute="top" secondItem="GEk-Ux-ibU" secondAttribute="bottom" constant="8" id="qwg-u7-ihR"/>
-                            <constraint firstItem="ljS-CG-Sjd" firstAttribute="leading" secondItem="M6Z-tv-scn" secondAttribute="leading" constant="20" id="rOT-uI-loB"/>
-                            <constraint firstItem="GEk-Ux-ibU" firstAttribute="baseline" secondItem="ljS-CG-Sjd" secondAttribute="baseline" id="sWN-Sj-ee8"/>
+                            <constraint firstItem="TCf-ox-aTh" firstAttribute="leading" secondItem="M6Z-tv-scn" secondAttribute="leading" id="GbO-a9-iHN"/>
+                            <constraint firstItem="TCf-ox-aTh" firstAttribute="top" secondItem="M6Z-tv-scn" secondAttribute="top" id="N6W-vF-MYu"/>
+                            <constraint firstAttribute="trailing" secondItem="TCf-ox-aTh" secondAttribute="trailing" id="Pxk-wK-ohA"/>
+                            <constraint firstAttribute="bottom" secondItem="TCf-ox-aTh" secondAttribute="bottom" id="hay-PT-Npy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="commentsStackView" destination="TCf-ox-aTh" id="XW9-07-M98"/>
+                    </connections>
                 </viewController>
                 <customObject id="c8C-Ul-INO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

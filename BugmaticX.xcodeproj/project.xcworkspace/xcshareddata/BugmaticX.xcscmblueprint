@@ -1,20 +1,28 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "21F032C9A551A20031449D3FCBA5689CADCA0CC8",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "21F032C9A551A20031449D3FCBA5689CADCA0CC8" : 9223372036854775807,
     "C93D49D0431BB46327C278CE770BA80C9C3CF41E" : 9223372036854775807,
     "B08156DDD97AB15A5D356D4D56FBF652F9A3C89E" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7D6C871C-C821-4A86-819E-23B2730C074B",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "C93D49D0431BB46327C278CE770BA80C9C3CF41E" : "bugmatic\/",
+    "21F032C9A551A20031449D3FCBA5689CADCA0CC8" : "BugmaticX\/",
+    "C93D49D0431BB46327C278CE770BA80C9C3CF41E" : "BugmaticX\/bugmatic\/",
     "B08156DDD97AB15A5D356D4D56FBF652F9A3C89E" : "bugmatic\/json11\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "BugmaticX",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BugmaticX.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:uliwitness\/BugmaticX.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "21F032C9A551A20031449D3FCBA5689CADCA0CC8"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/uliwitness\/json11.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
