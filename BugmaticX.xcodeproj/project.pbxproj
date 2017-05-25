@@ -19,6 +19,7 @@
 		55EEB23D1ED6FAAB003069DA /* md5hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB2351ED6FAAB003069DA /* md5hash.cpp */; };
 		55EEB23E1ED6FAAB003069DA /* url_request.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB2371ED6FAAB003069DA /* url_request.cpp */; };
 		55EEB2421ED6FAC3003069DA /* json11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB2401ED6FAC3003069DA /* json11.cpp */; };
+		55EEB2451ED7083E003069DA /* BUMIssueDetailsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB2441ED7083E003069DA /* BUMIssueDetailsViewController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		55EEB2381ED6FAAB003069DA /* url_request.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = url_request.hpp; path = bugmatic/bugmatic/url_request.hpp; sourceTree = SOURCE_ROOT; };
 		55EEB2401ED6FAC3003069DA /* json11.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = json11.cpp; path = ../../bugmatic/json11/json11.cpp; sourceTree = "<group>"; };
 		55EEB2411ED6FAC3003069DA /* json11.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = json11.hpp; path = ../../bugmatic/json11/json11.hpp; sourceTree = "<group>"; };
+		55EEB2431ED7083E003069DA /* BUMIssueDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUMIssueDetailsViewController.h; sourceTree = "<group>"; };
+		55EEB2441ED7083E003069DA /* BUMIssueDetailsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BUMIssueDetailsViewController.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +82,12 @@
 			children = (
 				55EEB2031ED6EE06003069DA /* BUMAppDelegate.h */,
 				55EEB2041ED6EE06003069DA /* BUMAppDelegate.m */,
-				55EEB2091ED6EE06003069DA /* BUMIssueListViewController.h */,
-				55EEB20A1ED6EE06003069DA /* BUMIssueListViewController.mm */,
 				55EEB20C1ED6EE06003069DA /* BUMWorkingCopyDocument.h */,
 				55EEB20D1ED6EE06003069DA /* BUMWorkingCopyDocument.mm */,
+				55EEB2091ED6EE06003069DA /* BUMIssueListViewController.h */,
+				55EEB20A1ED6EE06003069DA /* BUMIssueListViewController.mm */,
+				55EEB2431ED7083E003069DA /* BUMIssueDetailsViewController.h */,
+				55EEB2441ED7083E003069DA /* BUMIssueDetailsViewController.mm */,
 				55EEB23F1ED6FAB3003069DA /* bugmatic */,
 				55EEB20F1ED6EE06003069DA /* Assets.xcassets */,
 				55EEB2111ED6EE06003069DA /* Main.storyboard */,
@@ -103,18 +108,18 @@
 		55EEB23F1ED6FAB3003069DA /* bugmatic */ = {
 			isa = PBXGroup;
 			children = (
-				55EEB22E1ED6FAAB003069DA /* bugmatic.cpp */,
 				55EEB22F1ED6FAAB003069DA /* bugmatic.hpp */,
-				55EEB2301ED6FAAB003069DA /* configfile.cpp */,
+				55EEB22E1ED6FAAB003069DA /* bugmatic.cpp */,
 				55EEB2311ED6FAAB003069DA /* configfile.hpp */,
-				55EEB2321ED6FAAB003069DA /* fake_filesystem.cpp */,
+				55EEB2301ED6FAAB003069DA /* configfile.cpp */,
 				55EEB2331ED6FAAB003069DA /* fake_filesystem.hpp */,
-				55EEB2351ED6FAAB003069DA /* md5hash.cpp */,
+				55EEB2321ED6FAAB003069DA /* fake_filesystem.cpp */,
 				55EEB2361ED6FAAB003069DA /* md5hash.hpp */,
-				55EEB2371ED6FAAB003069DA /* url_request.cpp */,
+				55EEB2351ED6FAAB003069DA /* md5hash.cpp */,
 				55EEB2381ED6FAAB003069DA /* url_request.hpp */,
-				55EEB2401ED6FAC3003069DA /* json11.cpp */,
+				55EEB2371ED6FAAB003069DA /* url_request.cpp */,
 				55EEB2411ED6FAC3003069DA /* json11.hpp */,
+				55EEB2401ED6FAC3003069DA /* json11.cpp */,
 			);
 			name = bugmatic;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 				55EEB2391ED6FAAB003069DA /* bugmatic.cpp in Sources */,
 				55EEB23D1ED6FAAB003069DA /* md5hash.cpp in Sources */,
 				55EEB23A1ED6FAAB003069DA /* configfile.cpp in Sources */,
+				55EEB2451ED7083E003069DA /* BUMIssueDetailsViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

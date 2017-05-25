@@ -7,6 +7,7 @@
 //
 
 #import "BUMIssueListViewController.h"
+#import "BUMIssueDetailsViewController.h"
 #include <vector>
 
 
@@ -20,7 +21,7 @@ using namespace std;
 	vector<issue_info> _issues;
 }
 
--(IBAction)	issueRowDoubleClicked: (id)sender;
+-(IBAction) issueDoubleClicked: (id)sender;
 
 @end
 
@@ -79,14 +80,19 @@ using namespace std;
 }
 
 
--(IBAction)	issueRowDoubleClicked: (id)sender
+-(void)prepareForSegue:(NSStoryboardSegue *)segue sender:(id)sender
 {
-	NSIndexSet *rowIndexes = self.issuesTable.selectedRowIndexes;
-	if( rowIndexes.count > 1 ) {
-		
-	} else if( rowIndexes.count == 1 ) {
-		
+	BUMIssueDetailsViewController *destVC = (BUMIssueDetailsViewController*) [segue destinationController];
+	NSInteger rowIndex = self.issuesTable.selectedRowIndexes.firstIndex;
+	if( rowIndex >= 0 ) {
+		destVC.issueInfo = _issues[rowIndex];
 	}
+}
+
+
+-(IBAction) issueDoubleClicked: (id)sender
+{
+	[self performSegueWithIdentifier: @"IssueDoubleClickSegue" sender: self];
 }
 
 @end
