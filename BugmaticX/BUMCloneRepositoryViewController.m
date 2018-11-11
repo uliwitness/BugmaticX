@@ -9,14 +9,19 @@
 #import "BUMCloneRepositoryViewController.h"
 
 
+static NSString * BUMLastClonedProjectName = @"BUMLastClonedProjectName";
+static NSString * BUMLastClonedProjectAccountName = @"BUMLastClonedProjectAccountName";
+static NSString * BUMLastClonedDestinationPath = @"BUMLastClonedDestinationPath";
+static NSString * BUMLastClonedUsername = @"BUMLastClonedUsername";
+
 @implementation BUMCloneRepositoryViewController
 
 -(void) dealloc
 {
-	[NSUserDefaults.standardUserDefaults setObject: self.projectNameField.stringValue forKey: @"BUMLastClonedProjectName"];
-	[NSUserDefaults.standardUserDefaults setObject: self.projectAccountNameField.stringValue forKey: @"BUMLastClonedProjectAccountName"];
-	[NSUserDefaults.standardUserDefaults setObject: self.destinationPathTextField.stringValue forKey: @"BUMLastClonedDestinationPath"];
-	[NSUserDefaults.standardUserDefaults setObject: self.usernameTextField.stringValue forKey: @"BUMLastClonedUsername"];
+	[NSUserDefaults.standardUserDefaults setObject: self.projectNameField.stringValue forKey: BUMLastClonedProjectName];
+	[NSUserDefaults.standardUserDefaults setObject: self.projectAccountNameField.stringValue forKey: BUMLastClonedProjectAccountName];
+	[NSUserDefaults.standardUserDefaults setObject: self.destinationPathTextField.stringValue forKey: BUMLastClonedDestinationPath];
+	[NSUserDefaults.standardUserDefaults setObject: self.usernameTextField.stringValue forKey: BUMLastClonedUsername];
 }
 
 
@@ -24,10 +29,10 @@
 {
     [super viewDidLoad];
 	
-	self.projectNameField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: @"BUMLastClonedProjectName"] ?: @"";
-	self.projectAccountNameField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: @"BUMLastClonedProjectAccountName"] ?: @"";
-	self.destinationPathTextField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: @"BUMLastClonedDestinationPath"] ?: [@"~/" stringByExpandingTildeInPath];
-	self.usernameTextField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: @"BUMLastClonedUsername"] ?: @"";
+	self.projectNameField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: BUMLastClonedProjectName] ?: @"";
+	self.projectAccountNameField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: BUMLastClonedProjectAccountName] ?: @"";
+	self.destinationPathTextField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: BUMLastClonedDestinationPath] ?: [@"~/" stringByExpandingTildeInPath];
+	self.usernameTextField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: BUMLastClonedUsername] ?: @"";
 }
 
 
