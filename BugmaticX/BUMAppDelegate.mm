@@ -76,22 +76,16 @@ using namespace bugmatic;
 		dispatch_async(dispatch_get_main_queue(), ^{
 			completionHandler();
 			
-			[self openRepositoryAtURL: [NSURL fileURLWithPath: destinationPath]];
+			[NSDocumentController.sharedDocumentController openDocumentWithContentsOfURL: [NSURL fileURLWithPath: destinationPath] display: YES completionHandler:
+			 ^(NSDocument * _Nullable document, BOOL documentWasAlreadyOpen, NSError * _Nullable error)
+			 {
+				 if( error )
+				 {
+					 [NSApplication.sharedApplication presentError: error];
+				 }
+			 }];
 		});
 	} );
-}
-
-
--(void)	openRepositoryAtURL: (NSURL *)inURL
-{
-	[NSDocumentController.sharedDocumentController openDocumentWithContentsOfURL: inURL display: YES completionHandler:
-	 ^(NSDocument * _Nullable document, BOOL documentWasAlreadyOpen, NSError * _Nullable error)
-	 {
-		 if( error )
-		 {
-			 [NSApplication.sharedApplication presentError: error];
-		 }
-	 }];
 }
 
 
