@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55EEB2051ED6EE06003069DA /* BUMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB2041ED6EE06003069DA /* BUMAppDelegate.m */; };
+		556FFEA72197B26500ED6636 /* BUMCloneRepositoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556FFEA62197B26500ED6636 /* BUMCloneRepositoryViewController.m */; };
+		55EEB2051ED6EE06003069DA /* BUMAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB2041ED6EE06003069DA /* BUMAppDelegate.mm */; };
 		55EEB2081ED6EE06003069DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB2071ED6EE06003069DA /* main.m */; };
 		55EEB20B1ED6EE06003069DA /* BUMIssueListViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB20A1ED6EE06003069DA /* BUMIssueListViewController.mm */; };
 		55EEB20E1ED6EE06003069DA /* BUMWorkingCopyDocument.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55EEB20D1ED6EE06003069DA /* BUMWorkingCopyDocument.mm */; };
@@ -23,9 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		556FFEA52197B26500ED6636 /* BUMCloneRepositoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BUMCloneRepositoryViewController.h; sourceTree = "<group>"; };
+		556FFEA62197B26500ED6636 /* BUMCloneRepositoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BUMCloneRepositoryViewController.m; sourceTree = "<group>"; };
 		55EEB2001ED6EE06003069DA /* BugmaticX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugmaticX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55EEB2031ED6EE06003069DA /* BUMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BUMAppDelegate.h; sourceTree = "<group>"; };
-		55EEB2041ED6EE06003069DA /* BUMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BUMAppDelegate.m; sourceTree = "<group>"; };
+		55EEB2041ED6EE06003069DA /* BUMAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BUMAppDelegate.mm; sourceTree = "<group>"; };
 		55EEB2071ED6EE06003069DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55EEB2091ED6EE06003069DA /* BUMIssueListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BUMIssueListViewController.h; sourceTree = "<group>"; };
 		55EEB20A1ED6EE06003069DA /* BUMIssueListViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BUMIssueListViewController.mm; sourceTree = "<group>"; };
@@ -81,13 +84,15 @@
 			isa = PBXGroup;
 			children = (
 				55EEB2031ED6EE06003069DA /* BUMAppDelegate.h */,
-				55EEB2041ED6EE06003069DA /* BUMAppDelegate.m */,
+				55EEB2041ED6EE06003069DA /* BUMAppDelegate.mm */,
 				55EEB20C1ED6EE06003069DA /* BUMWorkingCopyDocument.h */,
 				55EEB20D1ED6EE06003069DA /* BUMWorkingCopyDocument.mm */,
 				55EEB2091ED6EE06003069DA /* BUMIssueListViewController.h */,
 				55EEB20A1ED6EE06003069DA /* BUMIssueListViewController.mm */,
 				55EEB2431ED7083E003069DA /* BUMIssueDetailsViewController.h */,
 				55EEB2441ED7083E003069DA /* BUMIssueDetailsViewController.mm */,
+				556FFEA52197B26500ED6636 /* BUMCloneRepositoryViewController.h */,
+				556FFEA62197B26500ED6636 /* BUMCloneRepositoryViewController.m */,
 				55EEB23F1ED6FAB3003069DA /* bugmatic */,
 				55EEB20F1ED6EE06003069DA /* Assets.xcassets */,
 				55EEB2111ED6EE06003069DA /* Main.storyboard */,
@@ -200,11 +205,12 @@
 				55EEB20B1ED6EE06003069DA /* BUMIssueListViewController.mm in Sources */,
 				55EEB2421ED6FAC3003069DA /* json11.cpp in Sources */,
 				55EEB2081ED6EE06003069DA /* main.m in Sources */,
-				55EEB2051ED6EE06003069DA /* BUMAppDelegate.m in Sources */,
+				55EEB2051ED6EE06003069DA /* BUMAppDelegate.mm in Sources */,
 				55EEB23B1ED6FAAB003069DA /* fake_filesystem.cpp in Sources */,
 				55EEB23E1ED6FAAB003069DA /* url_request.cpp in Sources */,
 				55EEB2391ED6FAAB003069DA /* bugmatic.cpp in Sources */,
 				55EEB23D1ED6FAAB003069DA /* md5hash.cpp in Sources */,
+				556FFEA72197B26500ED6636 /* BUMCloneRepositoryViewController.m in Sources */,
 				55EEB23A1ED6FAAB003069DA /* configfile.cpp in Sources */,
 				55EEB2451ED7083E003069DA /* BUMIssueDetailsViewController.mm in Sources */,
 			);
@@ -360,6 +366,7 @@
 				55EEB2191ED6EE06003069DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
