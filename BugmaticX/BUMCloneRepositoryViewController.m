@@ -26,7 +26,7 @@
 	
 	self.projectNameField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: @"BUMLastClonedProjectName"] ?: @"";
 	self.projectAccountNameField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: @"BUMLastClonedProjectAccountName"] ?: @"";
-	self.destinationPathTextField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: @"BUMLastClonedDestinationPath"] ?: @"";
+	self.destinationPathTextField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: @"BUMLastClonedDestinationPath"] ?: [@"~/" stringByExpandingTildeInPath];
 	self.usernameTextField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: @"BUMLastClonedUsername"] ?: @"";
 }
 
