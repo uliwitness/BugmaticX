@@ -15,7 +15,7 @@
 @interface BUMIssueDetailsViewController : NSViewController
 
 #if __cplusplus
-@property bugmatic::issue_info issueInfo;
+@property bugmatic::issue_info& issueInfo;
 #endif
 
 @end

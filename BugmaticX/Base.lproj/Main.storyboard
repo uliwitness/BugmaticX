@@ -842,14 +842,14 @@
             <objects>
                 <viewController title="IssueDoubleClickSegue" id="Ues-gG-aBb" customClass="BUMIssueDetailsViewController" sceneMemberID="viewController">
                     <view key="view" id="M6Z-tv-scn">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="342"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="370"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCf-ox-aTh">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="342"/>
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="370"/>
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="xsV-se-es1">
-                                        <rect key="frame" x="20" y="300" width="410" height="22"/>
+                                        <rect key="frame" x="20" y="328" width="410" height="22"/>
                                         <subviews>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GEk-Ux-ibU">
                                                 <rect key="frame" x="39" y="0.0" width="371" height="22"/>
@@ -881,7 +881,7 @@
                                         </constraints>
                                     </customView>
                                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tK5-z2-3Ui">
-                                        <rect key="frame" x="20" y="20" width="410" height="272"/>
+                                        <rect key="frame" x="20" y="48" width="410" height="272"/>
                                         <clipView key="contentView" drawsBackground="NO" id="8zH-cd-gq7">
                                             <rect key="frame" x="1" y="1" width="408" height="270"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -909,13 +909,39 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="558-76-298">
+                                        <rect key="frame" x="20" y="20" width="410" height="20"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Eo-vH-kE3">
+                                                <rect key="frame" x="0.0" y="-1" width="20" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="gz8-TT-IX1"/>
+                                                    <constraint firstAttribute="width" constant="20" id="oVN-lh-Z4a"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qce-LO-qAJ">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="addNewComment:" target="Ues-gG-aBb" id="0zH-2T-ZED"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="5Eo-vH-kE3" firstAttribute="leading" secondItem="558-76-298" secondAttribute="leading" id="4Uw-Jr-Ea0"/>
+                                            <constraint firstItem="5Eo-vH-kE3" firstAttribute="top" secondItem="558-76-298" secondAttribute="top" id="8Aq-nH-PEo"/>
+                                            <constraint firstAttribute="bottom" secondItem="5Eo-vH-kE3" secondAttribute="bottom" id="I3X-e9-43B"/>
+                                        </constraints>
+                                    </customView>
                                 </subviews>
                                 <edgeInsets key="edgeInsets" left="20" right="20" top="20" bottom="20"/>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
@@ -934,7 +960,7 @@
                 </viewController>
                 <customObject id="c8C-Ul-INO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="562" y="453"/>
+            <point key="canvasLocation" x="658" y="508"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="2kn-8C-Sfw">
@@ -1302,4 +1328,7 @@ Gw
             <point key="canvasLocation" x="1192" y="1213"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+    </resources>
 </document>
