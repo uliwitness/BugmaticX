@@ -96,4 +96,15 @@ using namespace std;
 	[self performSegueWithIdentifier: @"IssueDoubleClickSegue" sender: self];
 }
 
+-(void) workingCopyChanged
+{
+	std::vector<std::string>	whereClauses;
+	_issues.clear();
+	_workingCopy->list( whereClauses, [self](issue_info theIssue) {
+		_issues.push_back( theIssue );
+		std::sort( _issues.begin(), _issues.end(), ^( const issue_info& a, const issue_info& b ){ return bool( a.issue_number() < b.issue_number() ); } );
+		[self.issuesTable reloadData];
+	});
+}
+
 @end

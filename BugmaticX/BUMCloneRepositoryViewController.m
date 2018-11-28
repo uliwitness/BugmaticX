@@ -42,13 +42,27 @@ static NSString * BUMLastClonedUsername = @"BUMLastClonedUsername";
 	self.cancelButton.enabled = NO;
 	[self.cloneProgressSpinner startAnimation: self];
 	
-	[NSApplication.sharedApplication stopModalWithCode: NSModalResponseOK];
+	if( self.view.window.isSheet )
+	{
+		[self.view.window.sheetParent endSheet:self.view.window returnCode:NSModalResponseOK];
+	}
+	else
+	{
+		[NSApplication.sharedApplication stopModalWithCode: NSModalResponseOK];
+	}
 }
 
 
 -(IBAction) cancel: (id)sender
 {
-	[NSApplication.sharedApplication stopModalWithCode: NSModalResponseCancel];
+	if( self.view.window.isSheet )
+	{
+		[self.view.window.sheetParent endSheet:self.view.window returnCode:NSModalResponseCancel];
+	}
+	else
+	{
+		[NSApplication.sharedApplication stopModalWithCode: NSModalResponseCancel];
+	}
 }
 
 @end

@@ -68,7 +68,7 @@ using namespace std;
 
 -(void) setIssueTitle: (NSString*)inText
 {
-	_issueInfo.set_title( string(inText.UTF8String) );
+	_issueInfo.set_title( string(inText.UTF8String) ); // TODO: Write issue_info back to repo?
 }
 
 
@@ -79,7 +79,7 @@ using namespace std;
 
 -(void) setIssueBody: (NSString*)inText
 {
-	_issueInfo.set_body( string(inText.UTF8String) );
+	_issueInfo.set_body( string(inText.UTF8String) ); // TODO: Write issue_info back to repo?
 }
 
 @end

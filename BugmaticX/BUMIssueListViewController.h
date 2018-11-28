@@ -20,5 +20,7 @@
 @property bugmatic::working_copy *workingCopy;
 #endif
 
+-(void) workingCopyChanged;
+
 @end
 
