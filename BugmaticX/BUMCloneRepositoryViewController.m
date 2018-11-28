@@ -16,12 +16,25 @@ static NSString * BUMLastClonedUsername = @"BUMLastClonedUsername";
 
 @implementation BUMCloneRepositoryViewController
 
--(void) dealloc
+-(void) saveFieldContents
 {
+	NSString * userName = self.usernameTextField.stringValue;
+	if (userName.length > 0 && self.passwordTextField.stringValue.length > 0)
+	{
+		NSDictionary * secItemInfo = @{
+									   (__bridge NSString *)kSecAttrService: @"github.com",
+									   (__bridge NSString *)kSecClass: (__bridge NSString *)kSecClassGenericPassword,
+									   (__bridge NSString *)kSecAttrAccount: userName,
+									   (__bridge NSString *)kSecValueData: [self.passwordTextField.stringValue dataUsingEncoding: NSUTF8StringEncoding]
+									   };
+		SecItemDelete( (__bridge CFDictionaryRef) secItemInfo );
+		SecItemAdd( (__bridge CFDictionaryRef) secItemInfo, NULL );
+	}
+
 	[NSUserDefaults.standardUserDefaults setObject: self.projectNameField.stringValue forKey: BUMLastClonedProjectName];
 	[NSUserDefaults.standardUserDefaults setObject: self.projectAccountNameField.stringValue forKey: BUMLastClonedProjectAccountName];
 	[NSUserDefaults.standardUserDefaults setObject: self.destinationPathTextField.stringValue forKey: BUMLastClonedDestinationPath];
-	[NSUserDefaults.standardUserDefaults setObject: self.usernameTextField.stringValue forKey: BUMLastClonedUsername];
+	[NSUserDefaults.standardUserDefaults setObject: userName forKey: BUMLastClonedUsername];
 }
 
 
@@ -29,15 +42,40 @@ static NSString * BUMLastClonedUsername = @"BUMLastClonedUsername";
 {
     [super viewDidLoad];
 	
+	NSString * userName = [NSUserDefaults.standardUserDefaults objectForKey: BUMLastClonedUsername] ?: @"";
+	
 	self.projectNameField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: BUMLastClonedProjectName] ?: @"";
 	self.projectAccountNameField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: BUMLastClonedProjectAccountName] ?: @"";
 	self.destinationPathTextField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: BUMLastClonedDestinationPath] ?: [@"~/" stringByExpandingTildeInPath];
-	self.usernameTextField.stringValue = [NSUserDefaults.standardUserDefaults objectForKey: BUMLastClonedUsername] ?: @"";
+	self.usernameTextField.stringValue = userName;
+
+	if( userName.length > 0 )
+	{
+		NSDictionary * secItemInfo = @{
+									   (__bridge NSString *)kSecAttrService: @"github.com",
+									   (__bridge NSString *)kSecClass: (__bridge NSString *)kSecClassGenericPassword,
+									   (__bridge NSString *)kSecAttrAccount: userName,
+									   (__bridge NSString *)kSecReturnData: @YES,
+									   (__bridge NSString *)kSecMatchLimit: (__bridge NSString *)kSecMatchLimitOne
+									   };
+		CFTypeRef outData = NULL;
+		if (SecItemCopyMatching( (__bridge CFDictionaryRef) secItemInfo, &outData ) == noErr)
+		{
+			NSData * theData = (__bridge_transfer NSData*)outData;
+			NSString *passwordString = [[NSString alloc] initWithData:theData encoding:NSUTF8StringEncoding];
+			if (passwordString)
+			{
+				self.passwordTextField.stringValue = passwordString;
+			}
+		}
+	}
 }
 
 
 -(IBAction) clone: (id)sender
 {
+	[self saveFieldContents];
+	
 	self.okButton.enabled = NO;
 	self.cancelButton.enabled = NO;
 	[self.cloneProgressSpinner startAnimation: self];
