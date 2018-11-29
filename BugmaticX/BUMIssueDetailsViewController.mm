@@ -61,7 +61,7 @@ struct BUMIssueDetailsViewControllerCppIVars
 	[commentField sizeToFit];
 	[commentField setContentCompressionResistancePriority: NSLayoutPriorityDragThatCannotResizeWindow forOrientation: NSLayoutConstraintOrientationHorizontal];
 	[commentField setContentCompressionResistancePriority: NSLayoutPriorityDragThatCanResizeWindow forOrientation: NSLayoutConstraintOrientationVertical];
-	[self.commentsStackView insertArrangedSubview: commentField atIndex: std::max(self.commentsStackView.arrangedSubviews.count -1UL, 0UL)];
+	[self.commentsStackView insertArrangedSubview: commentField atIndex: (self.commentsStackView.arrangedSubviews.count > 0) ? (self.commentsStackView.arrangedSubviews.count -1UL) : 0UL];
 }
 
 
